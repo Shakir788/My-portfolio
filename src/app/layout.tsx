@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { CinematicOverlay } from "@/components/ui/CinematicOverlay";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Cortex } from "@/components/chat/Cortex";
 
 const inter = Inter({
@@ -27,6 +28,7 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://my-portfolio-phi-indol-26.vercel.app"),
   title: "Mohammad Shakir | Product Engineer",
   description:
     "Full Stack Software Engineer building AI-Powered SaaS, ERP & E-Commerce Products. View my latest projects including SPE ERP and Amina Academy.",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     title: "Mohammad Shakir | Product Engineer",
     description: "Building products, not just websites.",
     type: "website",
-    url: "https://shakir.dev",
+    url: "/",
     siteName: "Mohammad Shakir Portfolio",
   },
   twitter: {
@@ -57,8 +59,9 @@ export default function RootLayout({
       >
         <AmbientGlow />
         <CinematicOverlay />
+        <ScrollProgress />
         <Navbar />
-        <main className="relative pt-24 min-h-screen">
+        <main className="relative min-h-screen">
           {children}
         </main>
         <Cortex />

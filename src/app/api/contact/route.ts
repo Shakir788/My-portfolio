@@ -19,7 +19,7 @@ async function callOpenRouterWithFallback(messages: any) {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
-          "HTTP-Referer": "https://shakir.dev",
+          "HTTP-Referer": "https://my-portfolio-phi-indol-26.vercel.app",
           "X-Title": "Shakir Portfolio Lead Processor",
           "Content-Type": "application/json",
         },
